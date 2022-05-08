@@ -13,8 +13,8 @@ const UsersStack = createNativeStackNavigator();
 const UsersStackScreen = () => {
     return (
         <UsersStack.Navigator>
-            <UsersStack.Screen name="UsersScreen" component={UsersScreen} />
-            <UsersStack.Screen name="UserDetailScreen" component={UserDetailScreen} />
+            <UsersStack.Screen name="UsersScreen" component={UsersScreen} options={{ title: 'User List' }}/>
+            <UsersStack.Screen name="UserDetailScreen" component={UserDetailScreen} options={({ route }) => ({ title: route.params.userName })}/>
         </UsersStack.Navigator>
     )
 }

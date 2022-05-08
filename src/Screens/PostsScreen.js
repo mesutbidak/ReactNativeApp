@@ -25,7 +25,9 @@ const PostsScreen = ({ navigation }) => {
     const renderPost = ({ item }) => {
 
         return <TouchableOpacity onPress={() => goToPostDetail(item.id)}>
-            <Text>{item.title}</Text>
+            <View style={styles.postView}>
+                <Text style={styles.postText}>{item.title}</Text>
+            </View>
         </TouchableOpacity>
     };
     return (
@@ -38,5 +40,36 @@ const PostsScreen = ({ navigation }) => {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        //alignItems: 'center',
+        //justifyContent: 'center',
+        padding: 5,
+    },
+    postView: {
+        flex: 1,
+        padding: 3,
+        margin: 5,
+        alignItems: 'center',
+        //justifyContent: 'center',
+        borderRadius: 10,
+        elevation: 3,
+        backgroundColor: '#fff',
+        shadowOffset: { width: 1, height: 1 },
+        shadowColor: '#333',
+        shadowOpacity: 0.3,
+        shadowRadius: 2,
+    },
+    postText: {
+        fontSize: 20,
+        fontStyle: 'normal',
+        fontFamily: "Cochin",
+        fontWeight: 'normal',
+        textAlign:'center',
+        color:'gray',
+    },
+});
 
 export default PostsScreen

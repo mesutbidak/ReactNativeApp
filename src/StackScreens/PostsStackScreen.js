@@ -10,35 +10,12 @@ import PostDetailScreen from '../Screens/PostDetailScreen';
 const PostsStack = createNativeStackNavigator();
 
 const PostsStackScreen = () => {
-    // const apiUrl = "https://jsonplaceholder.typicode.com/posts";
-    // const [posts, setPosts] = useState([]);
-
-    // useEffect(() => {
-    //     fetch(apiUrl)
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             setPosts(data);
-    //         })
-
-    // }, []);
-    
-    // const renderPost = ({ item }) => {
-        
-    //     return <Text>{item.title}</Text>
-    // };
     return (
 
         <PostsStack.Navigator>
-            <PostsStack.Screen name="PostsScreen" component={PostsScreen} />
-            <PostsStack.Screen name="PostDetailScreen" component={PostDetailScreen} />
+            <PostsStack.Screen name="PostsScreen" component={PostsScreen} options={{ title: 'Post List' }}/>
+            <PostsStack.Screen name="PostDetailScreen" component={PostDetailScreen} options={{ title: 'Post Detail' }}/>
         </PostsStack.Navigator>
-        // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        //     <FlatList
-        //         data={posts}
-        //         renderItem={renderPost}
-        //         initialNumToRender={20}>
-        //     </FlatList>
-        // </View>
     );
 }
 
