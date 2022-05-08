@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+const PostsStack = createNativeStackNavigator();
+
 const PostsStackScreen = () => {
     const apiUrl = "https://jsonplaceholder.typicode.com/posts";
     const [posts, setPosts] = useState([]);
@@ -26,7 +28,8 @@ const PostsStackScreen = () => {
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <FlatList
                 data={posts}
-                renderItem={renderPost}>
+                renderItem={renderPost}
+                initialNumToRender={20}>
             </FlatList>
         </View>
     );

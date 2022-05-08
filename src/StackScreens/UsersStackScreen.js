@@ -13,8 +13,8 @@ const UsersStack = createNativeStackNavigator();
 const UsersStackScreen = () => {
     return (
         <UsersStack.Navigator>
-            <UsersStack.Screen name="Users" component={UsersScreen} />
-            <UsersStack.Screen name="UserDetail" component={UserDetailScreen} />
+            <UsersStack.Screen name="UsersScreen" component={UsersScreen} />
+            <UsersStack.Screen name="UserDetailScreen" component={UserDetailScreen} />
         </UsersStack.Navigator>
     )
 }

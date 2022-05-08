@@ -15,8 +15,8 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="Users" component={UsersStackScreen} />
-          <Tab.Screen name="Posts" component={PostsStackScreen} />
+          <Tab.Screen options={{ headerShown: false }} name="Users" component={UsersStackScreen} />
+          <Tab.Screen options={{ headerShown: false }} name="Posts" component={PostsStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaView>
