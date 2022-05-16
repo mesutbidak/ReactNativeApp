@@ -13,7 +13,7 @@ const PostsScreen = ({ navigation }) => {
         fetch(apiUrl)
             .then((res) => res.json())
             .then((data) => {
-                setPosts(data);
+                setPosts(data.slice(0,20));
             })
 
     }, []);

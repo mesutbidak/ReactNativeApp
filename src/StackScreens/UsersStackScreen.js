@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import UsersScreen from '../Screens/UsersScreen';
 import UserDetailScreen from '../Screens/UserDetailScreen';
+import UserMapScreen from '../Screens/UserMapScreen';
 
 
 const UsersStack = createNativeStackNavigator();
@@ -15,6 +16,7 @@ const UsersStackScreen = () => {
         <UsersStack.Navigator>
             <UsersStack.Screen name="UsersScreen" component={UsersScreen} options={{ title: 'User List' }}/>
             <UsersStack.Screen name="UserDetailScreen" component={UserDetailScreen} options={({ route }) => ({ title: route.params.userName })}/>
+            <UsersStack.Screen name="UserMapScreen" component={UserMapScreen}/>
         </UsersStack.Navigator>
     )
 }
