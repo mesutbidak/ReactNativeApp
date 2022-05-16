@@ -64,13 +64,9 @@ const UserDetailScreen = ({ route, navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        //...StyleSheet.absoluteFillObject,
         flex: 1, //the container will fill the whole screen.
         justifyContent: "flex-end",
         alignItems: "center",
-    },
-    map: {
-        ...StyleSheet.absoluteFillObject,
     },
     userView: {
         flex: 3,
