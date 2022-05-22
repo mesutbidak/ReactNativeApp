@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native';
 import React, { useState, useEffect } from 'react';
 //import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import UsersStackScreen from './src/StackScreens/UsersStackScreen';
 import PostsStackScreen from './src/StackScreens/PostsStackScreen';
