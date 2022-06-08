@@ -26,6 +26,8 @@ export default function App() {
                 : 'ios-person-outline';
             } else if (route.name === 'Posts') {
               iconName = focused ? 'ios-chatbubbles' : 'ios-chatbubbles-outline';
+            }else if(route.name === 'Albums'){
+              iconName = focused ? 'images' : 'images-outline';
             }
 
             // You can return any component that you like here!
