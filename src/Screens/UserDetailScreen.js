@@ -12,6 +12,7 @@ const UserDetailScreen = ({ route, navigation }) => {
     const [user, setUser] = useState({});
     const [userAdress, setUserAdress] = useState({});
     const [userCompany, setUserCompany] = useState({});
+    
     useEffect(() => {
         fetch(apiUrl + "/" + userId)
             .then((res) => res.json())

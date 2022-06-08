@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import UsersStackScreen from './src/StackScreens/UsersStackScreen';
 import PostsStackScreen from './src/StackScreens/PostsStackScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import AlbumsStackScreen from './src/StackScreens/AlbumsStackScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,6 +36,7 @@ export default function App() {
         })}>
           <Tab.Screen options={{ headerShown: false }} name="Users" component={UsersStackScreen} />
           <Tab.Screen options={{ headerShown: false }} name="Posts" component={PostsStackScreen} />
+          <Tab.Screen options={{ headerShown: false }} name="Albums" component={AlbumsStackScreen}/> 
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaView>
