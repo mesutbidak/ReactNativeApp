@@ -8,6 +8,7 @@ import UsersStackScreen from './src/StackScreens/UsersStackScreen';
 import PostsStackScreen from './src/StackScreens/PostsStackScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AlbumsStackScreen from './src/StackScreens/AlbumsStackScreen';
+import ToDoStackScreen from './src/StackScreens/ToDoStackScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +29,8 @@ export default function App() {
               iconName = focused ? 'ios-chatbubbles' : 'ios-chatbubbles-outline';
             }else if(route.name === 'Albums'){
               iconName = focused ? 'images' : 'images-outline';
+            }else if(route.name === 'ToDos'){
+              iconName = focused ? 'list' : 'list-outline';
             }
 
             // You can return any component that you like here!
@@ -39,6 +42,7 @@ export default function App() {
           <Tab.Screen options={{ headerShown: false }} name="Users" component={UsersStackScreen} />
           <Tab.Screen options={{ headerShown: false }} name="Posts" component={PostsStackScreen} />
           <Tab.Screen options={{ headerShown: false }} name="Albums" component={AlbumsStackScreen}/> 
+          <Tab.Screen options={{ headerShown: false }} name="ToDos" component={ToDoStackScreen}/> 
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaView>
